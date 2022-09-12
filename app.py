@@ -17,24 +17,17 @@ st.set_page_config(
 )
 
 
-@st.cache
-def make_dfs():
-    df_h = pd.read_csv('newouts\\hosp_normal.csv')
-    df_h = df_h.sort_values('EUI')
+df_h = pd.read_csv('newouts/hosp_normal.csv')
+df_h = df_h.sort_values('EUI')
 
-    df_o = pd.read_csv('newouts\\office_normal.csv')
-    df_o = df_o.sort_values('EUI')
+df_o = pd.read_csv('newouts/office_normal.csv')
+df_o = df_o.sort_values('EUI')
 
-    df_o_ph = pd.read_csv('newouts\\office_phinf.csv')
-    df_o_ph = df_o_ph.sort_values('R-Value Area Average (IP)')
+df_o_ph = pd.read_csv('newouts/office_phinf.csv')
+df_o_ph = df_o_ph.sort_values('R-Value Area Average (IP)')
 
-    df_h_ph = pd.read_csv('newouts\\hosp_phinf.csv')
-    df_h_ph = df_h_ph.sort_values('EUI')
-    return df_h, df_o, df_o_ph, df_h_ph
-
-
-df_h, df_o, df_o_ph, df_h_ph = make_dfs()
-
+df_h_ph = pd.read_csv('newouts/hosp_phinf.csv')
+df_h_ph = df_h_ph.sort_values('EUI')
 
 #!*fig = px.line(df_h, x='R-Value Area Average (IP)', y='EUI', markers=True)
 
