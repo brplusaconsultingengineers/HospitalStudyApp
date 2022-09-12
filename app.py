@@ -12,7 +12,7 @@ pd.set_option("display.precision", 3)
 
 st.set_page_config(
     # Setting the icon, text of the web browser tab
-    page_title='BR+A Compute Streamlit Example Template', layout='wide',
+    page_title='BR+A Consulting Engineers', layout='wide',
     page_icon='assets/br+alogo.png'
 )
 
